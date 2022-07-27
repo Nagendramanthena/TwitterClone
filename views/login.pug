@@ -1,0 +1,11 @@
+extends layouts/layoutlogin.pug
+
+block content 
+    .loginContainer
+        p#hello  Login
+        form(method="post") 
+            p.errorMessage #{errorMessage}
+            input#usernametextbox(type="text", name="logusername",placeholder="username or emailadress",required="" value=logusername)
+            input#usernametextbox(type="password", name="loginpassword",placeholder="password",value = loginpassword required="")
+            input#usernametextbox(type="submit",value="login")
+            a(href="/register") Need an account ?? register Here.
